@@ -8,6 +8,20 @@ describe "smallest hash value" do
     key_for_min_value(hash)
   end
 
+hash = {:blake => 500, :ashley => 2, :adam => 1}
+
+def key_for_min_value(hash)
+  index = 0
+  lowest_hash = {}
+
+  hash.collect do |key, value|
+    if value[index] < value[index +1]
+      lowest = key
+      index = index +1
+      puts lowest
+    end
+  end
+end
 
   it "does not call the `#values` method" do
     hash = {:blake => 500, :ashley => 2, :adam => 1}
