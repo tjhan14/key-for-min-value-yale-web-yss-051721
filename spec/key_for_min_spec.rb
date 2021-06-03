@@ -8,6 +8,8 @@ describe "smallest hash value" do
     key_for_min_value(hash)
   end
 
+
+
   it "does not call the `#values` method" do
     hash = {:blake => 500, :ashley => 2, :adam => 1}
 
