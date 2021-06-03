@@ -81,7 +81,6 @@ end
 
 key_for_min_value(hash)
 
-# Question 2 
 
 
 
