@@ -8,9 +8,19 @@ describe "smallest hash value" do
     key_for_min_value(hash)
   end
 
+def key_for_min_value(hash)
+  lowest_key = nil
+  lowest_value = Float::INFINITY
+  hash.each do |k, v|
+    if v < lowest_value
+      lowest_value = v
+      lowest_key = k
+    end
+  end
+  puts lowest_key
+end
+
 hash = {:blake => 500, :ashley => 2, :adam => 1}
-
-
 
   it "does not call the `#values` method" do
     hash = {:blake => 500, :ashley => 2, :adam => 1}
